@@ -1,0 +1,29 @@
+<!DOCTYPE html> <HTML>
+    <HEAD>
+<script>
+    function cambiaColor(color) {
+       console.log("color resivido "+ color)
+        var titulo = document.getElementById("titulo1")
+    titulo.style.color=color
+    }
+    function cambiaEtiquetas(color) {
+        var c= document.getElementsByTagName("h1")
+        for (let index = 0; index < c.length; index++) {
+            const element = c[index];
+            element.style.color=color
+            
+        }
+       var arr = [].slice.call(c);
+        arr.forEach(element => element.style.color= color)
+    }
+</script>
+    </HEAD>
+    <BODY>
+        <h1 id="titulo1">este es un titulo1</h1>
+        <h1 id="titulo2">este es un titulo2</h1>
+        <h1 id="titulo3">este es un titulo3</h1>
+        <h1 id="titulo4">este es un titulo4</h1>
+        <button onclick="cambiaEtiquetas('Red')">rojo</button>
+        <button onclick="cambiaEtiquetas('Green')">verde</button>
+    </BODY>
+</HTML>
