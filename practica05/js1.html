@@ -18,6 +18,14 @@
        var arr = [].slice.call(c);
         arr.forEach(element => element.style.color= color)
     }
+    function random(){
+        var c =document.getElementsByTagName("h1")
+        for (let index = 0; index < c.length; index++) {
+            const element = c[index];
+            element.style.color='#'+Math.floor(Math.random()*16777215).toString(16);
+        
+        }    
+    }
 
 </script>
     </HEAD>
@@ -28,5 +36,7 @@
         <h1 id="titulo4">este es un titulo4</h1>
         <button onclick="cambiaEtiquetas('red')">rojo</button>
         <button onclick="cambiaEtiquetas('Green')">verde</button>
+
+        <button onclick="random()">azar</button>
     </BODY>
 </HTML>
